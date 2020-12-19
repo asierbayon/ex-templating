@@ -7,9 +7,11 @@ module.exports.list = (req, res, next) => {
 
   const tweets = tweetsDB.sort((o1,o2) => o2.createdAt - o1.createdAt);
 
+
   res.render('tweets/list', {
     tweets: tweets,
     user: user
+
   });
 
   // Order tweets desc by date

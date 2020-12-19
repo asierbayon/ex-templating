@@ -1,10 +1,12 @@
 {{#each tweets as |tweet| }}
-    {{#with tweet}}
-        <div class="card">
-            <h5 class="card-header">{{ tweet.user }}</h5>
-            <div class="card-body">
-                <p class="card-text">{{ tweet.message }}</p>
-            </div>
-        </div>
-    {{/with}}
+{{#with tweet}}
+<div class="card">
+    <h5 class="card-header">{{ tweet.user }}</h5>
+    <div class="card-body">
+        <p class="card-text">{{ tweet.message }}</p>
+        <p class="card-text">{{ tweet.createdAt }}</p>
+
+    </div>
+</div>
+{{/with}}
 {{/each}}
