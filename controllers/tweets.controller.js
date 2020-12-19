@@ -5,8 +5,8 @@ const tweetsDB = require('../data/tweets')
 module.exports.list = (req, res, next) => {
   const { user } = req.query;
 
-  const tweets = tweetsDB
-  
+  const tweets = tweetsDB.sort((o1,o2) => o2.createdAt - o1.createdAt);
+
   res.render('tweets/list', {
     tweets: tweets,
     user: user
