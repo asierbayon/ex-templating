@@ -6,6 +6,8 @@ const logger = require('morgan');
 const app = express();
 
 // Configure hbs as view engine
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'))
 // Iteration 1: setup hbs as view engine
 require('./config/hbs.config');
 
